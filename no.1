@@ -1,0 +1,38 @@
+
+package testprogamer;
+
+
+public class TestProgamer {
+ private static final String[] satuan = {
+        "", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan", 
+        "sepuluh", "sebelas"
+    };
+
+    public static String terjemah(int n) {
+        if (n < 12) {
+            return satuan[n];
+        } else if (n < 20) {
+            return satuan[n - 10] + " belas";
+        } else if (n < 100) {
+            return terjemah(n / 10) + " puluh" + (n % 10 == 0 ? "" : " " + terjemah(n % 10));
+        } else if (n < 200) {
+            return "seratus" + (n % 100 == 0 ? "" : " " + terjemah(n % 100));
+        } else if (n < 1000) {
+            return terjemah(n / 100) + " ratus" + (n % 100 == 0 ? "" : " " + terjemah(n % 100));
+        } else if (n < 2000) {
+            return "seribu" + (n % 1000 == 0 ? "" : " " + terjemah(n % 1000));
+        } else if (n < 1000000) {
+            return terjemah(n / 1000) + " ribu" + (n % 1000 == 0 ? "" : " " + terjemah(n % 1000));
+        } else {
+            return "angka terlalu besar";
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(terjemah(12));       
+        System.out.println(terjemah(2012));     
+        System.out.println(terjemah(999999));   
+        System.out.println(terjemah(15555));
+    }
+    
+}
