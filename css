@@ -1,0 +1,100 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #90afc5;
+}
+
+header, nav, main, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    color: white;
+    background-image: url("https://harianesemarang.com/file/2023/01/speedometer-1249610-1536x1021.webp");
+}
+
+nav {
+    background-color: #763626;
+}
+
+nav ul {
+    list-style-type: armenian;
+    margin: 1px;
+    padding: 0;
+
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #760000;
+
+
+}
+
+nav ul li a:hover {
+    background-color: #111;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main section {
+    margin: 20px 0;
+    width: 80%;
+    max-width: 600px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+table {
+    position: relative;
+    left: 30px;
+    border: 5px solid #333333;
+    width: 100%;
+    background-color: #336b87;
+    color: white;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd
+}
+tr:hover {
+    background-color: cadetblue;
+}
+desain{
+
+}
+
+@media (min-width: 600px) {
+    nav ul li {
+        display: inline-block;
+    }
+
+    main {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    main section {
+        margin: 20px;
+        width: 45%;
+    }
+}
